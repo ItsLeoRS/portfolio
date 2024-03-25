@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    /* height: 100vh; */
+    display: flex;
+    position:absolute;
+    left: 0;
+    top: -2px;
+    object-fit: cover;
+    /* background-color: #333; */
+}
+
+.title-block {
+    display: flex;
+    position: relative;
+    left: 30%;
+    top: 15%;
+    .title {
+        position: relative;
+        left: -50%;
+        color: #fff;
+        text-align: center;
+        font-family: 'Lato';
+        /* font-weight: 300; */
+        letter-spacing: 5px;
+    }
+}
+
+#top {
+    /* display: none; */
+    .st48,
+    .st52,
+    .st50 {
+        animation: drift-right-up 80s alternate;
+    }
+    .st33,
+    .st51 {
+        animation: drift-right-up 75s alternate;
+    }
+    .st49,
+    .st42 {
+        animation: drift-right-up 65s alternate;
+    }
+}
+
+#bottom {
+    /* display: none; */
+    .st11,
+    .st56 {
+        animation: drift-down 70s alternate;
+    }
+    .st53,
+    .st54 {
+        animation: drift-right 195s alternate;
+    }
+    .st55,
+    .st36,
+    .st33 {
+        animation: drift-down 115s alternate;
+    }
+    .st51 {
+        animation: drift-down-right 105s alternate;
+    }
+}
+
+#nearright {
+    /* display: none; */
+    .st40,
+    .st43,
+    .st33 {
+        animation: drift-right 115s;
+    }
+    .st41,
+    .st44 {
+        animation: drift-right-up 105s;
+    }
+    .st42,
+    .st45,
+    .st46,
+    .st55,
+    .st47 {
+        animation: drift-right 135s;
+    }
+}
+
+#farright {
+    /* display: flex; */
+    .st54,
+    .st58,
+    .st59 {
+        animation: drift-right 55s;
+    }
+    .st57,
+    .st51 {
+        animation: drift-right-up 40s;
+    }
+}
+  
+  
+  @keyframes drift-right {
+    100% {
+      transform: translate(2000px, -20px);
+    }
+  }
+  
+  @keyframes drift-right-up {
+    100% {
+      transform: translate(2000px, -250px);
+    }
+  }
+  
+  @keyframes drift-up {
+    100% {
+      transform: translate(10px, -1450px);
+    }
+  }
+  
+  @keyframes drift-up-right {
+    100% {
+      transform: translate(175px, -1550px);
+    }
+  }
+  
+  @keyframes drift-down {
+    100% {
+      transform: translate(2000px, 1220px);
+    }
+  }
+  
+  @keyframes drift-down-right {
+    100% {
+      transform: translate(1450px, 320px);
+    }
+  }
+
+#about {
+    margin-bottom: 50px;
+}
+
+#skills {
+    margin-top: 50px;
+}
+
+.bg {
+    background-image: url(images/bacground_skills.jpg);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 250px;
+}
+
+.info {
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+.typing {
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing span {
+    position: relative;
+}
+
+.typing span::before{
+    content: "3D Artist";
+    color: yellow;
+    animation: words 20s infinite;
+}
+
+.typing span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 120%;
+    background-color: #212529;
+    border-left: 2px solid red;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Web Developer"
+    }
+    21%,40%{
+        content: "Video Editor"
+    }
+    41%,60%{
+        content: "Minecraft Server Dev"
+    }
+    61%,80%{
+        content: "UI/UX Desiner"
+    }
+}
+
+@keyframes typing {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+        5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sbtn {
+    display: flex;
+}
+
+.navbar {
+
+    background-color: #212529;
+}
+
+.form {
+    margin-left: 750px;
+    width: 400px;
+}
+
+.ch1 {
+    text-align: center;
+}
+
+.ctext {
+    display: flex;
+    font-size:10ch;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.videop {
+    margin-top: 40px;
+}
+
+.atext {
+    font-family: "Montserrat", sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.crtext {
+    color: orangered;
+}
